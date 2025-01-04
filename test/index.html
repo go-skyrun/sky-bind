@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>Two Way Data Binding</title>
+</head>
+
+<body>
+  <h2>Enter your information:</h2>
+  <div>
+    <span>Name:</span>
+    <input x-bind="name" type="text">
+    <span x-bind="name"></span>
+  </div>
+
+  <div>
+    <span>Surname:</span>
+    <input x-bind="surname" type="text">
+    <span x-bind="surname"></span>
+  </div>
+
+  <div>
+    <h2>Select your musical preferences:</h2>
+    <div>
+      <input x-bind="music.opera" id="music.opera" name="music.opera" type="checkbox">
+      <label for="music.opera">Opera</label>
+    </div>
+    <div>
+      <input x-bind="music.pop" id="music.pop" name="music.pop" type="checkbox">
+      <label for="music.pop">Pop</label>
+    </div>
+    <div>
+      <input x-bind="music.banjo" id="music.banjo" name="music.banjo" type="checkbox">
+      <label for="music.banjo">Banjo</label>
+    </div>
+    <span x-bind="music"></span>
+  </div>
+
+  <h2>Select your musical preferences:</h2>
+  <div>
+    <input x-bind="opera" id="opera" name="opera" type="checkbox">
+    <label for="opera">Opera</label>
+    <span x-bind="opera"></span>
+  </div>
+  <div>
+    <input x-bind="pop" id="pop" name="pop" type="checkbox">
+    <label for="pop">Pop</label>
+    <span x-bind="pop"></span>
+  </div>
+  <div>
+    <input x-bind="banjo" id="banjo" name="banjo" type="checkbox">
+    <label for="banjo">Banjo</label>
+    <span x-bind="banjo"></span>
+  </div>
+
+  <fieldset>
+    <legend>Please select your preferred contact method:</legend>
+    <div>
+      <input type="radio" id="emailCheck" x-bind="contact" name="contact" value="email" checked />
+      <label for="emailCheck">Email</label>
+
+      <input type="radio" id="phoneCheck" x-bind="contact" name="contact" value="phone" />
+      <label for="phoneCheck">Phone</label>
+
+      <input type="radio" id="mailCheck" x-bind="contact" name="contact" value="mail" />
+      <label for="mailCheck">Mail</label>
+    </div>
+  </fieldset>
+  <span x-bind="contact"></span>
+
+  <div style="margin-top: 24px;">
+    <label for="pet-select">Choose a pet:</label>
+
+    <select x-bind="pet" name="pet" id="pet-select">
+      <option value="">--Please choose an option--</option>
+      <option value="dog">Dog</option>
+      <option value="cat">Cat</option>
+      <option value="hamster">Hamster</option>
+      <option value="parrot">Parrot</option>
+      <option value="spider">Spider</option>
+      <option value="goldfish">Goldfish</option>
+    </select>
+  </div>
+  <span x-bind="pet"></span>
+
+  <div style="margin-top: 24px;">
+
+    <button onclick="log()">See Scope Values</button>
+
+  </div>
+
+  <script src="../sky-bind.min.js"></script>
+
+  <script>
+    setScope({
+      name: "test333",
+      opera: true,
+      contact: "phone",
+      pet: "hamster",
+      music: ["banjo"]
+    });
+  </script>
+
+</body>
+
+<style>
+  span {
+    display: inline-block;
+    width: 80px;
+  }
+
+  fieldset {
+    margin-top: 18px;
+  }
+
+  div {
+    margin-top: 12px;
+  }
+
+  label {
+    user-select: none;
+  }
+</style>
+
+</html>
