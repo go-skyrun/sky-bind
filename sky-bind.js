@@ -118,4 +118,8 @@
         scope[key] = value;
     }
   }
+
+  getScope = function () {
+    return scope;
+  }
 })();

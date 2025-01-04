@@ -86,11 +86,13 @@
 
   <div style="margin-top: 24px;">
 
-    <button onclick="log()">See Scope Values</button>
+    <button onclick="log()">Log scope values to console</button>
+    <br/><br/>
+    <button onclick="alert(JSON.stringify(getScope(), null, 2));">Submit</button>
 
   </div>
 
-  <script src="../sky-bind.min.js"></script>
+  <script src="../sky-bind.js"></script>
 
   <script>
     setScope({
