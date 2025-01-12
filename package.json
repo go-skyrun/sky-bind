@@ -1,15 +1,15 @@
 {
-  "name": "sky-bind",
+  "name": "bindjs",
   "version": "1.0.0",
   "description": "A simple, two-way data-binding library for javascript apps.",
-  "main": "sky-bind.js",
+  "main": "bind.js",
   "scripts": {
-    "build": "uglifyjs sky-bind.js -o sky-bind.min.js",
+    "build": "uglifyjs bind.js -o bind.min.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/go-skyrun/sky-bind.git"
+    "url": "git+https://github.com/ianua-app/bindjs.git"
   },
   "keywords": [
     "data-binding",
@@ -18,9 +18,9 @@
   "author": "tyler@gosky.run",
   "license": "LGPL-3.0-or-later",
   "bugs": {
-    "url": "https://github.com/go-skyrun/sky-bind/issues"
+    "url": "https://github.com/ianua/bindjs/issues"
   },
-  "homepage": "https://github.com/go-skyrun/sky-bind#readme",
+  "homepage": "https://github.com/ianua/bindjsd#readme",
   "devDependencies": {
     "uglify-js": "^3.19.3"
   }
